@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor-principal">
+    <h1>Inventario</h1>
+
+    <div class="barra-superior">
+        <input type="text" id="buscar" placeholder="Buscar...">
+        <button onclick="buscar()">Buscar</button>
+
+        <div class="grupo-botones">
+            <button onclick="ordenar('asc')">A-Z</button>
+            <button onclick="ordenar('desc')">Z-A</button>
+            <button onclick="nuevo()">Nuevo artículo</button>
+        </div>
+    </div>
+
+    <table class="tabla-productos">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+    </table>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
