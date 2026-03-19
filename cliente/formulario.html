@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario artículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor-principal">
+    <h1 id="titulo"></h1>
+
+    <form id="form">
+        <input type="hidden" id="id">
+        <input type="hidden" id="imagenActual">
+
+        <div class="formulario-dos-columnas">
+            <div class="columna">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label>Imagen:</label>
+                <input type="file" id="imagen" accept="image/*">
+            </div>
+
+            <div class="columna">
+                <label>Stock:</label>
+                <input type="number" id="stock" required min="0">
+
+                <label>Precio (€):</label>
+                <input type="number" id="precio" step="0.01" required>
+            </div>
+        </div>
+
+        <div class="botones-centro">
+            <button type="submit">Guardar</button>
+            <button type="button" class="boton-volver" onclick="volver()">Volver</button>
+        </div>
+    </form>
+</div>
+
+<script src="formulario.js"></script>
+</body>
+</html>
